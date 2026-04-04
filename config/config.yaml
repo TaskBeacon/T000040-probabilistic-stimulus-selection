@@ -1,0 +1,270 @@
+subinfo_fields:
+- name: subject_id
+  type: int
+  constraints:
+    min: 101
+    max: 999
+    digits: 3
+subinfo_mapping:
+  subject_id: 被试编号（3位）
+  Participant Information: 被试信息
+  registration_failed: 注册失败
+  registration_successful: 注册成功
+  invalid_input: '{field} 输入无效'
+window:
+  size:
+  - 1280
+  - 720
+  units: pix
+  screen: 0
+  bg_color: black
+  fullscreen: false
+  monitor_width_cm: 35.5
+  monitor_distance_cm: 60
+task:
+  task_name: probabilistic_stimulus_selection
+  save_path: ./outputs/human
+  language: Chinese
+  voice_name: zh-CN-YunyangNeural
+  voice_enabled: false
+  seed_mode: same_across_sub
+  overall_seed: 40040
+  block_seed:
+  - 40040
+  - 40041
+  - 40042
+  - 40043
+  - 40044
+  - 40045
+  - 40046
+  - 40047
+  - 40048
+  - 40049
+  phase_order:
+  - learning
+  - transfer
+  total_blocks: 7
+  total_trials: 510
+  trial_per_block: 73
+  conditions:
+  - train_ab
+  - train_cd
+  - train_ef
+  - test_ab
+  - test_ac
+  - test_ad
+  - test_ae
+  - test_af
+  - test_bc
+  - test_bd
+  - test_be
+  - test_bf
+  - test_cd
+  - test_ce
+  - test_cf
+  - test_de
+  - test_df
+  - test_ef
+  key_list:
+  - a
+  - l
+  - space
+  delta: 1
+  learning_conditions:
+  - train_ab
+  - train_cd
+  - train_ef
+  transfer_conditions:
+  - test_ab
+  - test_ac
+  - test_ad
+  - test_ae
+  - test_af
+  - test_bc
+  - test_bd
+  - test_be
+  - test_bf
+  - test_cd
+  - test_ce
+  - test_cf
+  - test_de
+  - test_df
+  - test_ef
+  learning_trials_per_block: 60
+  learning_trials_per_pair: 20
+  transfer_trials_total: 150
+  transfer_trials_per_pair: 10
+  learning_criteria:
+    train_ab: 0.65
+    train_cd: 0.60
+    train_ef: 0.50
+  learning_probabilities:
+    train_ab:
+      A: 0.80
+      B: 0.20
+    train_cd:
+      C: 0.70
+      D: 0.30
+    train_ef:
+      E: 0.60
+      F: 0.40
+  response_key_left: a
+  response_key_right: l
+  response_key_labels:
+    left: A
+    right: L
+  left_right_balance_policy: exact_within_block
+  symbol_role_shuffle_policy: random_per_subject
+  no_response_policy: timeout_counts_as_incorrect_on_learning
+  correct_score_delta: 1
+  incorrect_score_delta: 0
+  max_learning_blocks: 6
+  instruction_font: SimHei
+  symbol_font: MS Gothic
+  symbol_height_px: 200
+  symbol_x_left_px: -220
+  symbol_x_right_px: 220
+timing:
+  instruction_pause_duration: 0.0
+  ready_duration: 3.0
+  response_timeout: 4.0
+  feedback_duration: 1.0
+  iti_duration: 1.0
+stimuli:
+  instruction_text:
+    type: text
+    font: SimHei
+    text: |-
+      你将看到两枚日文假名符号。
+      请按 {left_key_label} 选择左边，按 {right_key_label} 选择右边。
+      学习阶段会有“正确/错误”反馈，测试阶段没有反馈。
+      请尽量根据你认为更可能正确的符号作答。
+      按空格开始。
+    color: white
+    height: 28
+    wrapWidth: 1000
+  block_ready:
+    type: text
+    font: SimHei
+    text: |-
+      {phase_label}即将开始
+      按空格继续
+    color: white
+    height: 30
+    wrapWidth: 980
+  iti_fixation:
+    type: text
+    font: SimHei
+    text: +
+    color: white
+    height: 44
+  feedback_correct:
+    type: text
+    font: SimHei
+    text: 正确
+    color: green
+    height: 40
+  feedback_incorrect:
+    type: text
+    font: SimHei
+    text: 错误
+    color: orange
+    height: 40
+  good_bye:
+    type: text
+    font: SimHei
+    text: |-
+      任务结束
+      按空格退出
+    color: white
+    height: 30
+    wrapWidth: 980
+  kana_1:
+    type: text
+    font: MS Gothic
+    text: あ
+    color: white
+    height: 200
+  kana_2:
+    type: text
+    font: MS Gothic
+    text: い
+    color: white
+    height: 200
+  kana_3:
+    type: text
+    font: MS Gothic
+    text: う
+    color: white
+    height: 200
+  kana_4:
+    type: text
+    font: MS Gothic
+    text: え
+    color: white
+    height: 200
+  kana_5:
+    type: text
+    font: MS Gothic
+    text: お
+    color: white
+    height: 200
+  kana_6:
+    type: text
+    font: MS Gothic
+    text: か
+    color: white
+    height: 200
+triggers:
+  map:
+    exp_onset: 1
+    exp_end: 2
+    block_onset: 10
+    block_end: 11
+    trial_onset: 20
+    response_onset: 30
+    left_response: 31
+    right_response: 32
+    timeout: 33
+    feedback_onset: 40
+    no_feedback_onset: 41
+    iti_onset: 50
+  driver:
+    type: serial_url
+    url: loop://
+    baudrate: 115200
+  timing:
+    post_delay_ms: 1
+  policy:
+    strict: false
+condition_generation:
+  learning_pair_order:
+  - train_ab
+  - train_cd
+  - train_ef
+  transfer_pair_order:
+  - test_ab
+  - test_ac
+  - test_ad
+  - test_ae
+  - test_af
+  - test_bc
+  - test_bd
+  - test_be
+  - test_bf
+  - test_cd
+  - test_ce
+  - test_cf
+  - test_de
+  - test_df
+  - test_ef
+  learning_trials_per_pair: 20
+  transfer_trials_per_pair: 10
+  learning_criteria:
+    train_ab: 0.65
+    train_cd: 0.60
+    train_ef: 0.50
+  max_learning_blocks: 6
+  left_right_balance_policy: exact_within_block
+  symbol_role_shuffle_policy: random_per_subject
+  no_response_policy: timeout_counts_as_incorrect_on_learning

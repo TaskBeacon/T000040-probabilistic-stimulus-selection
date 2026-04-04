@@ -1,0 +1,111 @@
+task_plot_spec:
+  spec_version: '0.2'
+  meta:
+    task_name: Probabilistic Stimulus Selection
+    mode: existing
+    task_id: T000040
+  figure:
+    output:
+      filename: task_flow.png
+      dpi: 300
+      width_in: 16.0
+      background: white
+    layout:
+      max_conditions: 1
+      screens_per_timeline: 6
+      screen_overlap_ratio: 0.1
+      screen_slope: 0.08
+      screen_slope_deg: 25.0
+      timeline_gap: 0.18
+      screen_aspect_ratio: 1.4545454545454546
+      left_margin: 0.2
+      right_margin: 0.03
+      top_margin: 0.03
+      bottom_margin: 0.05
+      condition_label_gap: 0.014
+      phase_label_pad: 0.01
+      duration_label_gap: 0.006
+      timeline_arrow_gap: 0.01
+      timeline_arrow_screen_clearance: 0.007
+      timeline_arrow_text_clearance: 0.01
+      timeline_arrow_extra_per_screen: 0.015
+      timeline_arrow_min_y: 0.02
+      timeline_arrow_max_y: 0.96
+  timelines:
+  - condition: train_ab
+    display_condition_label: Train Ab
+    phases:
+    - phase_name: choice phase
+      display_phase_label: Choice
+      duration_ms:
+        fixed: 4000
+      response_window_ms:
+        fixed: 4000
+      display_timing_label: 4000 ms
+      stim_ids: []
+      stimulus_example:
+        summary: '[annotation] choice phase'
+        modality: other
+        draw_hint: annotation
+        render_items:
+        - kind: annotation
+          text: choice phase
+      notes: ''
+    - phase_name: feedback phase
+      display_phase_label: Feedback
+      duration_ms:
+        fixed: 1000
+      response_window_ms: null
+      display_timing_label: 1000 ms
+      stim_ids:
+      - feedback_incorrect
+      stimulus_example:
+        summary: 错误
+        modality: visual
+        draw_hint: text
+        render_items:
+        - kind: text
+          text: 错误
+          color: orange
+          pos: null
+          height: 40.0
+      notes: unparsed_condition_test
+    - phase_name: iti phase
+      display_phase_label: ITI
+      duration_ms:
+        fixed: 1000
+      response_window_ms: null
+      display_timing_label: 1000 ms
+      stim_ids:
+      - iti_fixation
+      stimulus_example:
+        summary: +
+        modality: visual
+        draw_hint: text
+        render_items:
+        - kind: text
+          text: +
+          color: white
+          pos: null
+          height: 44.0
+      notes: ''
+    condition_variants:
+    - train_cd
+    - train_ef
+    - test_ab
+    - test_ac
+    - test_ad
+    - test_ae
+    - test_af
+    - test_bc
+    - test_bd
+    - test_be
+    - test_bf
+    - test_cd
+    - test_ce
+    - test_cf
+    - test_de
+    - test_df
+    - test_ef
+    display_condition_note: 'Also: Train Cd, Train Ef, tests.'
+  legend: []

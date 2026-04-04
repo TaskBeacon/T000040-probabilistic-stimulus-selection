@@ -1,0 +1,175 @@
+[
+  {
+    "id": "W2027916800",
+    "title": "Dopaminergic Genes Predict Individual Differences in Susceptibility to Confirmation Bias",
+    "authors": [
+      "Bradley B. Doll",
+      "Kent E. Hutchison",
+      "Michael J. Frank"
+    ],
+    "year": 2011,
+    "journal": "Journal of Neuroscience",
+    "doi_or_url": "https://doi.org/10.1523/jneurosci.6486-10.2011",
+    "citation_count": 194,
+    "is_high_impact": false,
+    "open_access": true,
+    "used_for": [
+      "task_workflow",
+      "timing_parameters"
+    ],
+    "parameter_bindings": {},
+    "notes": ""
+  },
+  {
+    "id": "W2419503723",
+    "title": "Variability in Dopamine Genes Dissociates Model-Based and Model-Free Reinforcement Learning",
+    "authors": [
+      "Bradley B. Doll",
+      "Kevin G. Bath",
+      "Nathaniel D. Daw",
+      "Michael J. Frank"
+    ],
+    "year": 2016,
+    "journal": "Journal of Neuroscience",
+    "doi_or_url": "https://doi.org/10.1523/jneurosci.1901-15.2016",
+    "citation_count": 120,
+    "is_high_impact": false,
+    "open_access": true,
+    "used_for": [
+      "task_workflow",
+      "timing_parameters"
+    ],
+    "parameter_bindings": {},
+    "notes": ""
+  },
+  {
+    "id": "W4200240026",
+    "title": "Computational validity: using computation to translate behaviours across species",
+    "authors": [
+      "A. David Redish",
+      "\u00c1d\u00e1m Kepecs",
+      "Lisa M. Anderson",
+      "Olivia L. Calvin",
+      "Nicola M. Grissom",
+      "Ann F. Haynos",
+      "Sarah R. Heilbronner",
+      "Alexander Herman",
+      "Suma Jacob",
+      "Sisi Ma",
+      "Iris Vilares",
+      "Sophia Vinogradov"
+    ],
+    "year": 2021,
+    "journal": "Philosophical Transactions of the Royal Society B Biological Sciences",
+    "doi_or_url": "https://doi.org/10.1098/rstb.2020.0525",
+    "citation_count": 60,
+    "is_high_impact": false,
+    "open_access": true,
+    "used_for": [
+      "task_workflow",
+      "timing_parameters"
+    ],
+    "parameter_bindings": {},
+    "notes": ""
+  },
+  {
+    "id": "W2204145535",
+    "title": "Cortical-subcortical interactions in cognitive control, associative learning and motor control",
+    "authors": [
+      "Peter A. Butcher"
+    ],
+    "year": 2014,
+    "journal": "eScholarship (California Digital Library)",
+    "doi_or_url": "https://openalex.org/W2204145535",
+    "citation_count": 2,
+    "is_high_impact": false,
+    "open_access": true,
+    "used_for": [
+      "task_workflow",
+      "timing_parameters"
+    ],
+    "parameter_bindings": {},
+    "notes": ""
+  },
+  {
+    "id": "W1573524174",
+    "title": "Reinforcement Learning in Individuals at Risk for Alzheimer's Disease",
+    "authors": [
+      "Christina M. Figueroa"
+    ],
+    "year": 2013,
+    "journal": "e-Publications@Marquette (Marquette University)",
+    "doi_or_url": "https://openalex.org/W1573524174",
+    "citation_count": 1,
+    "is_high_impact": false,
+    "open_access": true,
+    "used_for": [
+      "task_workflow",
+      "timing_parameters"
+    ],
+    "parameter_bindings": {},
+    "notes": ""
+  },
+  {
+    "id": "W7131925766",
+    "title": "Novel modulation of P2X3 receptors by endogenous Calcium/calmodulin-dependent serine protein kinase (CASK)",
+    "authors": [
+      "S. K. Hullugundi",
+      "Andrea Nistri",
+      "Elsa Fabbretti",
+      "Tanja Bele",
+      "Aswini Gnanasekaran",
+      "Mayya Sundukova"
+    ],
+    "year": 2014,
+    "journal": "RUNG",
+    "doi_or_url": "https://openalex.org/W7131925766",
+    "citation_count": 0,
+    "is_high_impact": false,
+    "open_access": true,
+    "used_for": [
+      "task_workflow",
+      "timing_parameters"
+    ],
+    "parameter_bindings": {},
+    "notes": ""
+  },
+  {
+    "id": "W2760554526",
+    "title": "Assessing changes in cognitive functioning after estradiol administration using computational modelling and experiential probing",
+    "authors": [
+      "Sebastijan Veseli\u010d"
+    ],
+    "year": 2017,
+    "journal": "PeFprints (University of Ljubljana)",
+    "doi_or_url": "https://openalex.org/W2760554526",
+    "citation_count": 0,
+    "is_high_impact": false,
+    "open_access": true,
+    "used_for": [
+      "task_workflow",
+      "timing_parameters"
+    ],
+    "parameter_bindings": {},
+    "notes": ""
+  },
+  {
+    "id": "W2522809153",
+    "title": "Pharmacogenetics of Non-Motor Symptoms in Parkinson's Disease",
+    "authors": [
+      "Brian D. Robertson"
+    ],
+    "year": 2016,
+    "journal": "Scholarship@Western (Western University)",
+    "doi_or_url": "https://openalex.org/W2522809153",
+    "citation_count": 0,
+    "is_high_impact": false,
+    "open_access": true,
+    "used_for": [
+      "task_workflow",
+      "timing_parameters"
+    ],
+    "parameter_bindings": {},
+    "notes": ""
+  }
+]
