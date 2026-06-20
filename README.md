@@ -24,6 +24,8 @@ The six visible symbols are Japanese kana glyphs rendered from PsychoPy text sti
 
 ## 2. Task Flow
 
+![Task Flow](task_flow.png)
+
 ### Block-Level Flow
 
 | Step | Description |

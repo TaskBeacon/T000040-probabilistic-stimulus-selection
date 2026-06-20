@@ -6,6 +6,7 @@ import pandas as pd
 from psychopy import core
 
 from psyflow import (
+    BlockUnit,
     StimBank,
     StimUnit,
     SubInfo,
@@ -119,21 +120,37 @@ def _run_block_trials(
     score_total: int,
 ) -> tuple[list[dict[str, Any]], int]:
     rows: list[dict[str, Any]] = []
-    for condition in schedule:
+    state = {"score_total": int(score_total)}
+
+    def _run_one(win_arg, kb_arg, settings_arg, condition_arg):
         row = run_trial(
-            win=win,
-            kb=kb,
-            settings=settings,
-            condition=condition,
+            win=win_arg,
+            kb=kb_arg,
+            settings=settings_arg,
+            condition=condition_arg,
             stim_bank=stim_bank,
             trigger_runtime=trigger_runtime,
             block_id=block_id,
             block_idx=block_idx,
-            score_total=score_total,
+            score_total=state["score_total"],
         )
-        rows.append(row)
-        score_total = int(row.get("score_total", score_total))
-    return rows, score_total
+        state["score_total"] = int(row.get("score_total", state["score_total"]))
+        return row
+
+    block = (
+        BlockUnit(
+            block_id=block_id,
+            block_idx=block_idx,
+            settings=settings,
+            window=win,
+            keyboard=kb,
+            n_trials=len(schedule),
+        )
+        .add_condition(schedule)
+        .run_trial(_run_one)
+        .to_dict(rows)
+    )
+    return block.get_all_data(), state["score_total"]
 
 
 def _make_role_assignment(settings: TaskSettings, subject_id: int) -> RoleAssignment:
